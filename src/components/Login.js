@@ -2,8 +2,10 @@ import React from "react";
 import '../styles/lstyle.css';
 import Navu from './Navu';
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+    const Navigate=useNavigate();
     const [uname, setUname]=useState('');
     const [password, setPassword]=useState('');
 
@@ -26,7 +28,7 @@ function Login() {
 
         if(data.user){
             alert('login successful')
-            window.location.href='/profile'
+            Navigate('/profile')
             localStorage.setItem('token', data.user);
         }
         else{
