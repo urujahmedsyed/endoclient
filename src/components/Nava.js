@@ -1,11 +1,12 @@
 import React from "react";
 import '../styles/Nav.css';
+import { Link } from "react-router-dom";
 function Nava() {
 return (
 <>
 <nav class="navbar navbar-expand-lg " style={{"background-color": "rgb(30, 30, 30)"}}>
         <div class="container-fluid">
-            <a class="navbar-brand" href="/"><i class="fa fa-rocket"></i>&nbsp; cCare</a>
+            <Link class="navbar-brand" to="/"><i class="fa fa-rocket"></i>&nbsp; cCare</Link>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -14,13 +15,13 @@ return (
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
+                        <Link class="nav-link" to="/">Home</Link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/predict">Predict</a>
+                        <Link class="nav-link" to="/predict">Predict</Link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/data">Images</a>
+                        <Link class="nav-link" to="/data">Images</Link>
                     </li>
                     {/* <li class="nav-item">
                         <a class="nav-link" href="/adash">Dashboard</a>
@@ -29,7 +30,7 @@ return (
                         <a class="nav-link" href="/analysis">Analysis</a>
                     </li> */}
                 </ul>
-                <a class="btn btn-light" href="/" role="button" id="lg" style={{"font-weight":"500"}}>Logout</a>
+                <Link class="btn btn-light" to="/" role="button" id="lg" style={{"font-weight":"500"}}>Logout</Link>
             </div>
         </div>
     </nav>

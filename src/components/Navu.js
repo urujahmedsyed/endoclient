@@ -1,5 +1,7 @@
 import React from "react";
 import '../styles/Nav.css';
+import { Link } from "react-router-dom";
+
 function Navu() {
 return (
 <>
@@ -14,14 +16,14 @@ return (
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
+                        <Link class="nav-link" to="/">Home</Link>
                     </li>
                     {/* <li class="nav-item">
                         <a class="nav-link" href="/research">Research</a>
                     </li> */}
                 </ul>
-                <a class="btn btn-light" href="/login" role="button" id="lg" style={{"font-weight":"500"}}>Login</a>
-                <a class="btn btn-light" href="/signup" role="button" id="su" style={{"font-weight":"500"}}>Sign Up</a>
+                <Link class="btn btn-light" to="/login" role="button" id="lg" style={{"font-weight":"500"}}>Login</Link>
+                <Link class="btn btn-light" to="/signup" role="button" id="su" style={{"font-weight":"500"}}>Sign Up</Link>
             </div>
         </div>
     </nav>
