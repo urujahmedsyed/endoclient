@@ -7,11 +7,11 @@ import Profile from './components/Profile';
 import SignUp from './components/SignUp';
 import Predict from './components/Predict';
 import Data from './components/Data';
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 
 const App = () => {
     return(
-    <BrowserRouter>
+    <Router>
       <Routes>
       <Route path='/' element={<Homep1/>}/>
       <Route path='/research' element={<Research/>}/>
@@ -25,7 +25,7 @@ const App = () => {
 
       {/* <Route path='*' element={<ErrorPage/>}/> */}
     </Routes> 
-    </BrowserRouter>
+    </Router>
     );
 };
 
