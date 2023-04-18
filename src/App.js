@@ -7,9 +7,10 @@ import Profile from './components/Profile';
 import SignUp from './components/SignUp';
 import Predict from './components/Predict';
 import Data from './components/Data';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 
-const App = () => {
+export default function App() {
     return(
     <Router>
       <Routes>
@@ -28,6 +29,4 @@ const App = () => {
     </Router>
     );
 };
-
-export default App;
 
