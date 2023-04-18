@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import Homep1 from './components/Homep1';
+import Research from './components/Research';
+import Login from './components/Login';
+import Adash from './components/Adash';
+import Analysis from './components/Analysis';
+import Profile from './components/Profile';
+import SignUp from './components/SignUp';
+import Predict from './components/Predict';
+import Data from './components/Data';
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return(
+    <BrowserRouter>
+      <Routes>
+      <Route path='/' element={<Homep1/>}/>
+      <Route path='research' element={<Research/>}/>
+      <Route path='login' element={<Login/>}/>
+      <Route path='adash' element={<Adash/>}/>
+      <Route path='analysis' element={<Analysis/>}/>
+      <Route path='profile' element={<Profile/>}/>
+      <Route path='signup' element={<SignUp/>}/>
+      <Route path='predict' element={<Predict/>}/>
+      <Route path='data' element={<Data/>}/>
+
+      {/* <Route path='*' element={<ErrorPage/>}/> */}
+    </Routes> 
+    </BrowserRouter>
+    );
+};
 
 export default App;
+
