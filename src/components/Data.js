@@ -33,7 +33,6 @@ function Data() {
                     <th scope="col">S. No</th>
                     <th scope="col">Image</th>
                     <th scope="col">Prediction Value</th>
-                    <th scope="col">Actual Value</th>
                 </tr>
             </thead>
             <tbody id="table-body" style={{"color":"black"}}>
@@ -42,7 +41,6 @@ function Data() {
                         <td>{index+1}</td>
                         <td><img alt='preview' src={URL.createObjectURL(new Blob([new Uint8Array(item.image.data)], { type: item.type }))} width="100" /></td>
                         <td>{item.result}</td>
-                        <td>{item.ground}</td>
                     </tr>
                 )) : <tr><td colSpan="3">{Table==null? "Loading":"No Data"}</td></tr>}
             </tbody>
