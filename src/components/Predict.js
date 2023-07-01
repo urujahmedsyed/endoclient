@@ -61,14 +61,6 @@ export default function Predict(){
             
                 <img src={image} alt='preview' style={{'width': '10%', 'height': '10%'}}/>
             </div>
-            <h6><span className="fw-bold">What is the actual value: </span></h6>
-                <h6>
-                <label for="parasitized">Parasitized &nbsp;</label>
-                <input type="radio" id="Parasitized" name="answer" value="Parasitized" onChange={handleRadioChange}></input>
-                <br></br>
-                <label for="uninfected">Uninfected &nbsp;</label>
-                <input type="radio" id="Uninfected" name="answer" value="Uninfected" onChange={handleRadioChange}></input>
-                </h6>
             <div className="d-flex justify-content-center">
             <br></br>
                 <p id="filered" className="outred fs-6 fw-lighter"></p>
